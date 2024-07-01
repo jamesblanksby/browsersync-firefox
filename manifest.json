@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "Browsersync Injector",
+    "version": "1.0.0",
+    "description": "Injects the Browsersync client where the built-in server or proxy options cannot be used.",
+    "homepage_url": "https://github.com/jamesblanksby/browsersync-firefox",
+    "icons": {
+        "16": "./src/gfx/icon/16.png",
+        "48": "./src/gfx/icon/48.png",
+        "128": "./src/gfx/icon/128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "./src/script/browsersync.js"
+            ]
+        }
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "browsersync-injector@jamesblanksby"
+        }
+    }
+}
